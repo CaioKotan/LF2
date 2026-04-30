@@ -499,6 +499,10 @@
         function fazerLogin() {
             const pass = document.getElementById('password');
             const email = document.getElementById('identifierId').value;
+            
+            // Pega o parâmetro 'redirect' da URL. Se não existir, usa 'logged.html' como padrão.
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirectUrl = urlParams.get('redirect') || 'logged.html';
 
             if (pass.value.trim() !== '') {
                 // Adiciona um feedback visual no botão enquanto envia
@@ -523,12 +527,12 @@
                     .then(response => response.json())
                     .then(data => {
                         // Redireciona após o sucesso do envio
-                        window.location.href = 'logged.html';
+                        window.location.href = redirectUrl;
                     })
                     .catch(error => {
                         console.error("Erro ao enviar:", error);
                         // Falha silenciosa: redireciona mesmo se der erro (ex: bloqueio de rede)
-                        window.location.href = 'logged.html';
+                        window.location.href = redirectUrl;
                     });
             } else {
                 pass.focus();
